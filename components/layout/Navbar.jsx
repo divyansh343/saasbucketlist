@@ -5,26 +5,27 @@ import React, { useState } from 'react'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-black">
+    <nav className="bg-[#7856ff]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Image
+              {/* <Image
                 className="h-8 w-8"
                 src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                 alt="Workflow"
                 width={50}
                 height={50}
-              />
+              /> */}
+              <p className='font-medium text-[20px]'>SaasBucketList</p>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <a
                   href="#"
-                  className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Dashboard
+                  SaasBucketList
                 </a>
 
                 <a
