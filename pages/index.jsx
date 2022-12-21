@@ -25,10 +25,10 @@ export default function Home() {
         <div>
           {/* <Carousel /> */}
         </div>
-        <div className='mx-[0px] md:mx-[50px] lg:ml-[120px] lg:mr-[300px] mt-4 grid grid-flow-row'>
+        <div className='mx-[20px] md:mx-[50px] lg:ml-[120px] lg:mr-[300px] mt-4 grid grid-flow-row'>
           <SaasCard iname="Copy.AI" subs="Free" baseCol="bg-[#F4F4F9]" color="text-black" isfor="Developers" />
-          <SaasCard iname="Copy.AI" subs="Free" baseCol="bg-red-400" color="text-black" isfor="Solopreneuers" />
-          <SaasCard iname="Copy.AI" subs="Free" baseCol="bg-blue-400" color="text-black" isfor="Developers" />
+          <SaasCard iname="chut.AI" subs="Free" baseCol="bg-red-400" color="text-black" isfor="Solopreneuers" />
+          <SaasCard iname="huut.AI" subs="Free" baseCol="bg-blue-400" color="text-black" isfor="Developers" />
           <SaasCard iname="Copy.AI" subs="Freemium" baseCol="bg-yellow-400" color="text-black" isfor="Developers" />
           <SaasCard iname="Copy.AI" subs="Freemium" />
           <SaasCard iname="Copy.AI" subs="Freemium" />
