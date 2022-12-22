@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import Layout from "../components/Layout"
+import { Toaster } from 'react-hot-toast'
 
 function MyApp({
   Component,
@@ -7,11 +8,15 @@ function MyApp({
 }) {
   return (
     <>
-    <div  >
-      <Layout> 
-      <Component {...pageProps} />
-      </Layout >
-    </div>
+      <div  >
+        <Toaster
+          position="bottom-right"
+          reverseOrder={false}
+        />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout >
+      </div>
     </>
   )
 }
