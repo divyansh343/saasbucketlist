@@ -7,9 +7,6 @@ const Layout = ({ children }) => {
       <div>
         {children}
       </div>
-      {/* <Info />
-      <Cta />
-      <Footer /> */}
     </div>
   )
 }

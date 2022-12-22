@@ -7,9 +7,11 @@ function MyApp({
 }) {
   return (
     <>
+    <div  >
       <Layout> 
       <Component {...pageProps} />
       </Layout >
+    </div>
     </>
   )
 }
