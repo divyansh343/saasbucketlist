@@ -5,7 +5,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: 'Sarabun', sans-serif;
+  /* font-family: 'Cuprum', sans-serif; */
+  /* font-family: 'Hanken Grotesk', sans-serif; */
+  /* font-family: 'Merienda', cursive; */
   overflow-x: hidden;
 }
 

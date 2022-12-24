@@ -4,18 +4,18 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <div className="navbar fixed top-0  z-10  bg-gradient-to-r from-orange-400 to-rose-400">
+    <div className="navbar fixed top-0 z-10  bg-gradient-to-r from-orange-400 to-rose-400">
       <div className="flex-1">
         <Link href="/">
-          <p className="btn btn-ghost normal-case text-xl">SaasBucket [ List ]</p>
+          <p className="btn btn-ghost normal-case text-xl">SaasBucketList</p>
         </Link>
-      
-        <Link href="/saas" className=''>
+
+        {/* <Link href="/saas" className=''>
           <p className="btn btn-ghost normal-case  text-xl">Saas</p>
         </Link>
         <Link href="/onboarding" className=''>
           <p className="btn btn-ghost normal-case  text-xl">on</p>
-        </Link>
+        </Link> */}
       </div>
       <div className="flex-none">
         {/* <div className="dropdown dropdown-end">
@@ -49,6 +49,15 @@ const Navbar = () => {
               </a>
             </li>
             <li><a>Settings</a></li>
+            <Link href="/onboarding" className=''>
+              <li><a>Onboarding</a></li>
+            </Link>
+            <Link href="/saas" className=''>
+              <li><a>Saas</a></li>
+            </Link>
+            <Link href="/posts" className=''>
+              <li><a>Posts</a></li>
+            </Link>
             <li><a>Logout</a></li>
           </ul>
         </div>
