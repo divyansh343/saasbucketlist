@@ -43,22 +43,24 @@ const Navbar = () => {
           </label>
           <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
             <li>
-              <a className="justify-between">
+              <p className="justify-between">
                 Profile
                 <span className="badge">New</span>
-              </a>
+              </p>
             </li>
-            <li><a>Settings</a></li>
+            <Link href="/auth" className=''>
+              <li><p>Login</p></li>
+            </Link>
             <Link href="/onboarding" className=''>
-              <li><a>Onboarding</a></li>
+              <li><p>Onboarding</p></li>
             </Link>
             <Link href="/saas" className=''>
-              <li><a>Saas</a></li>
+              <li><p>Saas</p></li>
             </Link>
             <Link href="/posts" className=''>
-              <li><a>Posts</a></li>
+              <li><p>Posts</p></li>
             </Link>
-            <li><a>Logout</a></li>
+            <li><p>Logout</p></li>
           </ul>
         </div>
       </div>

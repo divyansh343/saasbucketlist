@@ -2,9 +2,11 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 
 import saas from '../../assets/images/saas.png'
-const SaasCard = ({ isfor, color, baseCol, iname, subs }) => {
+const SaasCard = ({ isfor, color, baseCol, iname, subs , description, img }) => {
   const [show, setshow] = useState(false)
-
+  function truncate(str, n) {
+    return (str.length > n) ? str.slice(0, n - 1) + '...' : str;
+  };
   return (
     <div className=' my-3'>
       <article
@@ -25,8 +27,8 @@ const SaasCard = ({ isfor, color, baseCol, iname, subs }) => {
           border-[0.5px]
           pt-[10px] px-[4px] sm:p-6
           `}>
-          <div className='grid place-items-center lg:place-items-start my-2 lg:my-0'>
-            <Image width={250} height={120} src={saas} alt='lawda ka saas' ></Image>
+          <div className='grid place-items-center lg:place-items-start my-2 lg:my-0 '>
+            <Image width={250} height={120} src={ img || saas } alt='lawda ka saas' ></Image>
           </div>
           <div className='text-start pb-2'>
             <p className='text-[16px] lg:text-[18px] mx-3 mt-2  text-[#0f1419] font-semibold underline decoration-red-500 '>{iname}       </p>
@@ -36,7 +38,7 @@ const SaasCard = ({ isfor, color, baseCol, iname, subs }) => {
             show ?
               <>
                 <div className='text-start'>
-                  <p className='font-thin text-[16px] mt-2 mx-2'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui maiores modi dolor repellendus adipisci culpa sit dicta voluptatibus, aliquam corrupti corporis! Asperiores.</p>
+                  <p className='font-thin text-[16px] mt-2 mx-2'>{truncate(description,400)}</p>
                 </div>
                 <div className={`text-start text-[16px] ${!baseCol? "bg-gray-200":"bg-gray-50"} mb-1  p-2 rounded-[2px] mt-2 font-thin`}>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum doloribus enim nobis?</p>

@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import { toast } from 'react-hot-toast'
+import { useRouter } from 'next/router'
+
 const Onboarding = () => {
+  const router = useRouter()
+
   const [modalState, setModalState] = useState("1")
   const [selected, setSelected] = useState("")
   const [proSelected, setProSelected] = useState("")
@@ -294,12 +298,12 @@ const Onboarding = () => {
                 </div>
                 <div className='grid place-items-end'>
                   <div className='grid grid-flow-col'>
-                    <div onClick={() => setModalState("2")} className='py-1 px-3 bg-[#59FFE9] hover:bg-amber-400 rounded-[4px] mr-2 mb-20 cursor-pointer'>
+                    <div onClick={() => setModalState("3")} className='py-1 px-3 bg-[#59FFE9] hover:bg-amber-400 rounded-[4px] mr-2 mb-20 cursor-pointer'>
                       <p className='text-[20px]'>
                         Previous
                       </p>
                     </div>
-                    <div onClick={() => setModalState("4")} className='py-1 px-3 bg-[#59FFE9] hover:bg-amber-400 rounded-[4px] mr-28 mb-20 cursor-pointer'>
+                    <div onClick={() => router.push('/auth')} className='py-1 px-3 bg-[#59FFE9] hover:bg-amber-400 rounded-[4px] mr-28 mb-20 cursor-pointer'>
                       <p className='text-[20px]'>
                         Next
                       </p>
