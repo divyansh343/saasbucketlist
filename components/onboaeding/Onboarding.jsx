@@ -21,8 +21,8 @@ const Onboarding = () => {
 
   return (
     <div className='mt-20'>
-      <div className='mx-[10px] mt-10 lg:mx-[100px]'>
-        <div className='bg-gradient-to-r from-orange-400 to-rose-400 shadow-lg border-[2px] rounded-[4px]  ' >
+      <div className='mx-[10px] m-10 lg:mx-[100px]'>
+        <div className='theme-col shadow-lg border-[2px] rounded-[4px]  ' >
           {
             modalState === "1" ?
               <>

@@ -5,9 +5,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Sarabun', sans-serif;
+  /* font-family: "Sarabun", sans-serif; */
   /* font-family: 'Cuprum', sans-serif; */
-  /* font-family: 'Hanken Grotesk', sans-serif; */
+  font-family: 'Hanken Grotesk', sans-serif;
   /* font-family: 'Merienda', cursive; */
   overflow-x: hidden;
 }
@@ -35,3 +35,17 @@ a {
     background: black;
   }
 }
+
+/*  */
+/*  */
+.theme-col {
+  @apply bg-gradient-to-r from-orange-400 to-rose-400;
+  /* @apply bg-[#edf2f4]; */
+}
+
+.secondary-col {
+  @apply bg-[#edf2f4];
+  /* @apply bg-[#e9ecef]; */
+}
+/*  */
+/*  */

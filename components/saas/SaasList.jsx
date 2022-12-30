@@ -9,7 +9,7 @@ const SaasList = () => {
         {
           data.map(item => (
             <>
-              <SaasCard iname={item.saas} description={item.description} img={item.img} />
+              <SaasCard iname={item.saas} description={item.description} img={item.img} baseCol />
             </>
           ))
         }
