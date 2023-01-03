@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 
 const Navbar = () => {
   const router = useRouter()
-  const { data: session } = useSession()
+  const { data: session, status } = useSession()
 
   const userLogout = ()=> {
     router.push("/")
@@ -15,7 +15,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar fixed top-0 z-10 border-b-[0.2px] border-gray-800 font-two plus-col">
+    <div className={`navbar fixed top-0 z-10 border-b-[0.2px] border-gray-800 font-two ${status==="authenticated"?"plus-col":"theme-col"} `}>
       <div className="flex-1">
         <Link href="/">
           <p className="btn btn-ghost normal-case text-xl tracking-wide">SaasBucketList</p>
@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="flex-none">
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
+            <div className="w-10 rounded-full ">
               {
                 session ?
                   <Image alt='' height={50} width={50} src={session.user.image} /> :

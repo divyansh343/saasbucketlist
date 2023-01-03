@@ -1,25 +1,52 @@
 import { signIn } from 'next-auth/react'
+import Image from 'next/image'
 import React from 'react'
 
 const LoginComponent = () => {
   return (
-    <div>
-      <div className='grid place-items-center theme-col h-[100vh]'>
-        <div className='mt-44'>
-          <p className='text-[60px] text-center leading-snug px-5'>
-            Welcome to
-            <span className='secondary-col rounded ml-2 p-1 font-[Cuprum]'>
-              Bucket List
-            </span>
-          </p>
-        </div>
-        <div className='mt-24 mb-32'>
-          <button type="button"
-            onClick={() => signIn()}
-            class="text-white bg-[#1971ff] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2">
-            <svg class="mr-2 -ml-1 w-4 h-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg>
-            Sign in with Google
-          </button>
+    <div className=''>
+      <div class="relative mt-24 lg:mt-5 py-16 ">
+        <div class="relative container m-auto px-6 text-gray-500 md:px-12 xl:px-40">
+          <div class="m-auto md:w-8/12 lg:w-6/12 xl:w-6/12">
+            <div class="rounded-xl bg-white shadow-xl">
+              <div class="p-6 sm:p-16">
+                <div class="space-y-4">
+                  <Image height={50} width={50} src="https://tailus.io/sources/blocks/social/preview/images/icon.svg" loading="lazy" class="w-10" alt="tailus logo" />
+                  <h2 class="mb-8 text-2xl text-cyan-900 font-bold font-two tracking-wide">Sign in to unlock the Bucket.</h2>
+                </div>
+                <div class="mt-16 grid space-y-4">
+                  <button class="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 
+ hover:border-[#434343] hover:border-opacity-80 focus:bg-blue-50 active:bg-blue-100">
+                    <div onClick={() => signIn()} class="relative flex items-center space-x-4 justify-center">
+                      <Image height={50} width={50} src="https://tailus.io/sources/blocks/social/preview/images/google.svg" class="absolute left-0 w-5" alt="google logo" />
+                      <span class="font-two block w-max font-semibold tracking-wide text-gray-700 text-sm transition duration-300 sm:text-base">Continue with Google</span>
+                    </div>
+                  </button>
+                  <button class="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 
+ hover:border-[#434343] hover:border-opacity-80 focus:bg-blue-50 active:bg-blue-100">
+                    <div class="relative flex items-center space-x-4 justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="absolute left-0 w-5 text-gray-700" viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                      </svg>
+                      <span class="font-two block w-max font-semibold tracking-wide text-gray-700 text-sm transition duration-300 sm:text-base">Continue with Github</span>
+                    </div>
+                  </button>
+                  <button class="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 
+                                     hover:border-[#434343] hover:border-opacity-80 focus:bg-blue-50 active:bg-blue-100">
+                    <div class="relative flex items-center space-x-4 justify-center">
+                      <Image height={50} width={50} src="https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg" class="absolute left-0 w-5" alt="Facebook logo" />
+                      <span class="font-two block w-max font-semibold tracking-wide text-gray-700 text-sm transition duration-300 sm:text-base">Continue with Facebook</span>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="mt-24 space-y-4 font-two text-gray-600 text-center sm:-mb-8">
+                  <p class="text-xs">By proceeding, you agree to our <a href="#" class="underline">Terms of Use</a> and confirm you have read our <a href="#" class="underline">Privacy and Cookie Statement</a>.</p>
+                  <p class="text-xs">This site is protected by reCAPTCHA and the <a href="#" class="underline">Google Privacy Policy</a> and <a href="#" class="underline">Terms of Service</a> apply.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

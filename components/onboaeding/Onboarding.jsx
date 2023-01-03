@@ -25,7 +25,7 @@ const Onboarding = () => {
     router.push('/saas')
   } else {
     return (
-      <div className='mt-20'>
+      <div className='mt-20 font-two tracking-wide'>
         <div className='mx-[10px] m-10 lg:mx-[100px]'>
           <div className='theme-col shadow-lg border-[2px] rounded-[4px]  ' >
             {
@@ -41,7 +41,7 @@ const Onboarding = () => {
                         <div onClickCapture={() => setSelected("developer")}>
 
                           <div className=''>
-                            <div className={`rounded-[4px] border-[2px] my-2 lg:mx-2 cursor-pointer ${selected === "developer" ? "bg-[#59FFE9]" : null}
+                            <div className={`rounded-[4px] border-[2px] my-2 lg:mx-2 cursor-pointer ${selected === "developer" ? "bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb]" : null}
                   `}>
                               <div className='grid place-items-center'>
                                 <p className='text-[30px] mx-3 lg:text-[60px] font-semibold'>Developer</p>
@@ -60,7 +60,7 @@ const Onboarding = () => {
                   my-2 
                   lg:mx-2 
                   cursor-pointer
-                  ${selected === "designer" ? "bg-[#59FFE9]" : null}
+                  ${selected === "designer" ? "bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb]" : null}
                   `}>
                               <div className='grid place-items-center'>
                                 <p className='text-[30px] mx-3 lg:text-[60px] font-semibold'>Designer</p>
@@ -76,7 +76,7 @@ const Onboarding = () => {
                   my-2 
                   lg:mx-2 
                   cursor-pointer
-                  ${selected === "indiehacker" ? "bg-[#59FFE9]" : null}
+                  ${selected === "indiehacker" ? "bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb]" : null}
                   `}>
                               <div className='grid place-items-center'>
                                 <p className='text-[30px] mx-3 lg:text-[60px] font-semibold'>Indie Hacker</p>
@@ -90,7 +90,7 @@ const Onboarding = () => {
                   my-2 
                   lg:mx-2 
                   cursor-pointer
-                  ${selected === "freelancer" ? "bg-[#59FFE9]" : null}
+                  ${selected === "freelancer" ? "bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb]" : null}
                   `}>
                               <div className='grid place-items-center'>
                                 <p className='text-[30px] mx-3 lg:text-[60px] font-semibold'>Freelancer</p>
@@ -104,7 +104,7 @@ const Onboarding = () => {
                   my-2 
                   lg:mx-2 
                   cursor-pointer
-                  ${selected === "creator" ? "bg-[#59FFE9]" : null}
+                  ${selected === "creator" ? "bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb]" : null}
                   `}>
                               <div className='grid place-items-center'>
                                 <p className='text-[30px] mx-3 lg:text-[60px] font-semibold'>Creator</p>
@@ -118,7 +118,7 @@ const Onboarding = () => {
                   my-2 
                   lg:mx-2 
                   cursor-pointer
-                  ${selected === "marketer" ? "bg-[#59FFE9]" : null}
+                  ${selected === "marketer" ? "bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb]" : null}
                   `}>
                               <div className='grid place-items-center'>
                                 <p className='text-[30px] mx-3 lg:text-[60px] font-semibold'>Marketer</p>
@@ -131,7 +131,7 @@ const Onboarding = () => {
                     </div>
                   </div>
                   <div className='grid place-items-end'>
-                    <div onClick={changeModal} className='py-1 px-3 bg-[#59FFE9] rounded-[4px] mr-28 mb-5 cursor-pointer'>
+                    <div onClick={changeModal} className='py-1 px-3 bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb] rounded-[4px] mr-28 mb-5 cursor-pointer'>
                       <p className='text-[20px]'>
                         Next
                       </p>
@@ -159,7 +159,7 @@ const Onboarding = () => {
                         <div onClickCapture={() => setCoding(true)}>
 
                           <div className=''>
-                            <div className={`rounded-[4px] border-[2px] my-2 lg:mx-2 cursor-pointer ${codingState === true ? "bg-[#59FFE9]" : null}
+                            <div className={`rounded-[4px] border-[2px] my-2 lg:mx-2 cursor-pointer ${codingState === true ? "bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb]" : null}
                   `}>
                               <div className='grid place-items-center'>
                                 <p className='text-[30px] mx-3 lg:text-[60px] font-semibold'>Yes, I do</p>
@@ -177,7 +177,7 @@ const Onboarding = () => {
                   my-2 
                   lg:mx-2 
                   cursor-pointer
-                  ${codingState === false ? "bg-[#59FFE9]" : null}
+                  ${codingState === false ? "bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb]" : null}
                   `}>
                               <div className='grid place-items-center'>
                                 <p className='text-[30px] mx-3 lg:text-[60px] font-semibold'>No, I don&apos;t</p>
@@ -193,12 +193,12 @@ const Onboarding = () => {
                   </div>
                   <div className='grid place-items-end'>
                     <div className='grid grid-flow-col'>
-                      <div onClick={() => setModalState("1")} className='py-1 px-3 bg-[#59FFE9] hover:bg-amber-400 rounded-[4px] mr-2 mb-20 cursor-pointer'>
+                      <div onClick={() => setModalState("1")} className='py-1 px-3 bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb] hover:bg-amber-400 rounded-[4px] mr-2 mb-20 cursor-pointer'>
                         <p className='text-[20px]'>
                           Previous
                         </p>
                       </div>
-                      <div onClick={() => setModalState("3")} className='py-1 px-3 bg-[#59FFE9] hover:bg-amber-400 rounded-[4px] mr-28 mb-20 cursor-pointer'>
+                      <div onClick={() => setModalState("3")} className='py-1 px-3 bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb] hover:bg-amber-400 rounded-[4px] mr-28 mb-20 cursor-pointer'>
                         <p className='text-[20px]'>
                           Next
                         </p>
@@ -227,7 +227,7 @@ const Onboarding = () => {
 
                         <div onClickCapture={() => setProSelected("product")}>
                           <div className=''>
-                            <div className={`rounded-[4px] border-[2px] my-2 lg:mx-2 cursor-pointer ${proSelected === "product" ? "bg-[#59FFE9]" : null}
+                            <div className={`rounded-[4px] border-[2px] my-2 lg:mx-2 cursor-pointer ${proSelected === "product" ? "bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb]" : null}
                   `}>
                               <div className='grid place-items-center'>
                                 <p className='text-[30px] mx-3 lg:text-[60px] font-semibold'>Already built</p>
@@ -242,7 +242,7 @@ const Onboarding = () => {
 
                         <div onClickCapture={() => setProSelected("buildproduct")}>
                           <div className=''>
-                            <div className={`rounded-[4px] border-[2px] my-2 lg:mx-2 cursor-pointer ${proSelected === "buildproduct" ? "bg-[#59FFE9]" : null}
+                            <div className={`rounded-[4px] border-[2px] my-2 lg:mx-2 cursor-pointer ${proSelected === "buildproduct" ? "bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb]" : null}
                   `}>
                               <div className='grid place-items-center'>
                                 <p className='text-[30px] mx-3 lg:text-[60px] font-semibold'>Building</p>
@@ -257,7 +257,7 @@ const Onboarding = () => {
 
                         <div onClickCapture={() => setProSelected("planning")}>
                           <div className=''>
-                            <div className={`rounded-[4px] border-[2px] my-2 lg:mx-2 cursor-pointer ${proSelected === "planning" ? "bg-[#59FFE9]" : null}
+                            <div className={`rounded-[4px] border-[2px] my-2 lg:mx-2 cursor-pointer ${proSelected === "planning" ? "bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb]" : null}
                   `}>
                               <div className='grid place-items-center'>
                                 <p className='text-[30px] mx-3 lg:text-[60px] font-semibold'>Planning</p>
@@ -272,7 +272,7 @@ const Onboarding = () => {
 
                         <div onClickCapture={() => setProSelected("research")}>
                           <div className=''>
-                            <div className={`rounded-[4px] border-[2px] my-2 lg:mx-2 cursor-pointer ${proSelected === "research" ? "bg-[#59FFE9]" : null}
+                            <div className={`rounded-[4px] border-[2px] my-2 lg:mx-2 cursor-pointer ${proSelected === "research" ? "bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb]" : null}
                   `}>
                               <div className='grid place-items-center'>
                                 <p className='text-[30px] mx-3 lg:text-[60px] font-semibold'>Researching</p>
@@ -292,12 +292,12 @@ const Onboarding = () => {
                   </div>
                   <div className='grid place-items-end'>
                     <div className='grid grid-flow-col'>
-                      <div onClick={() => setModalState("3")} className='py-1 px-3 bg-[#59FFE9] hover:bg-amber-400 rounded-[4px] mr-2 mb-20 cursor-pointer'>
+                      <div onClick={() => setModalState("3")} className='py-1 px-3 bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb] hover:bg-amber-400 rounded-[4px] mr-2 mb-20 cursor-pointer'>
                         <p className='text-[20px]'>
                           Previous
                         </p>
                       </div>
-                      <div onClick={() => router.push('/auth')} className='py-1 px-3 bg-[#59FFE9] hover:bg-amber-400 rounded-[4px] mr-28 mb-20 cursor-pointer'>
+                      <div onClick={() => router.push('/auth')} className='py-1 px-3 bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb] hover:bg-amber-400 rounded-[4px] mr-28 mb-20 cursor-pointer'>
                         <p className='text-[20px]'>
                           Next
                         </p>

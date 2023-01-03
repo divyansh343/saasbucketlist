@@ -33,7 +33,7 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
+    color: #1d1d1f;
     background: black;
   }
 }
@@ -67,6 +67,9 @@ a {
   @apply bg-[#f5f5f7];
 }
 
+.font-one {
+  font-family: 'CeraPro'
+}
 .font-two {
  font-family: 'SF Pro Display', sans-serif;
 }
@@ -81,7 +84,6 @@ a {
 }
 .plus-col {
   @apply bg-gradient-to-r from-orange-300 to-rose-300;
-  /* @apply bg-[#e9ecef]; */
 }
 /*  */
 /*  */
