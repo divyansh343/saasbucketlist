@@ -53,7 +53,7 @@ const Navbar = () => {
                 <span className="badge">New</span>
               </p>
             </li>
-            <Link href="/login" className=''>
+            <Link href="/auth" className=''>
               <li><p>Login</p></li>
             </Link>
             <Link href="/onboarding" className=''>
