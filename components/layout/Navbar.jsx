@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import React, { useState } from 'react'
 import Link from 'next/link';
-
+import { useSession } from 'next-auth/react';
 const Navbar = () => {
+  const { data: session } = useSession()
   return (
     <div className="navbar fixed top-0 z-10 border-b-[0.2px] border-gray-800 theme-col">
       <div className="flex-1">
         <Link href="/">
-          <p className="btn btn-ghost normal-case text-xl font-[Cuprum] tracking-wide">SaasBucketList</p>
+          <p className="btn btn-ghost normal-case text-xl tracking-wide">SaasBucketList</p>
         </Link>
 
         {/* <Link href="/saas" className=''>
@@ -38,7 +39,11 @@ const Navbar = () => {
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
-              <Image alt='' height={50} width={50} src="https://placeimg.com/80/80/people" />
+              {
+                session ?
+                <Image alt='' height={50} width={50}src={session.user.image} /> :
+                <Image alt='' height={50} width={50} src="https://placeimg.com/80/80/people" />
+              }
             </div>
           </label>
           <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
@@ -48,7 +53,7 @@ const Navbar = () => {
                 <span className="badge">New</span>
               </p>
             </li>
-            <Link href="/auth" className=''>
+            <Link href="/login" className=''>
               <li><p>Login</p></li>
             </Link>
             <Link href="/onboarding" className=''>

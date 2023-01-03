@@ -36,7 +36,7 @@ const Onboarding = () => {
                     </ul>
                   </div> */}
                   <div className='mt-[40px]' >
-                    <p className='text-[30px] lg:text-[60px] font-semibold'>I am, <span className='bg-slate-700 text-white font-mono rounded-[4px] px-2 decoration-slate-50'> {selected ? selected :"  _  "} </span> </p>
+                    <p className='text-[30px] lg:text-[60px] '>I am, <span className='bg-slate-700 text-white rounded-[4px] px-2 decoration-slate-50'> {selected ? selected :"  _  "} </span> </p>
                   </div>
                   <div className='mt-4 mb-10'>
                     <div className='grid lg:grid-cols-2'>

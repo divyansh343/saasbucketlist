@@ -1,22 +1,24 @@
 import '../styles/globals.css'
 import Layout from "../components/Layout"
 import { Toaster } from 'react-hot-toast'
-
+import { SessionProvider } from "next-auth/react"
 function MyApp({
   Component,
-  pageProps
+  pageProps: { session, ...pageProps },
 }) {
   return (
     <>
-      <div  >
-        <Toaster
-          position="bottom-right"
-          reverseOrder={false}
-        />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout >
-      </div>
+      <SessionProvider session={session}>
+        <div  >
+          <Toaster
+            position="bottom-right"
+            reverseOrder={false}
+          />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout >
+        </div>
+      </SessionProvider>
     </>
   )
 }

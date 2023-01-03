@@ -6,10 +6,13 @@ body {
   padding: 0;
   margin: 0;
   /* font-family: "Sarabun", sans-serif; */
-  /* font-family: 'Cuprum', sans-serif; */
-  font-family: 'Hanken Grotesk', sans-serif;
+  /* font-family: 'Manrope', sans-serif; */
+  font-family: 'CeraPro';
+  /* font-family: 'SF Pro Display', sans-serif; */
+                                                
   /* font-family: 'Merienda', cursive; */
   overflow-x: hidden;
+  background: #fbfbfb;
 }
 
 #root {
@@ -37,14 +40,40 @@ a {
 }
 
 /*  */
+
+
+@font-face {
+  font-family: "CeraPro";
+  src: url('../assets/fonts/Cera-Pro-Black.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+  
+@font-face {
+  font-family: "CeraPro";
+  src: url('../assets/fonts/Cera-Pro-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+  
+@font-face {
+  font-family: "CeraPro";
+  src: url('../assets/fonts/Cera-Pro-Black-Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
 /*  */
 .theme-col {
-  @apply bg-gradient-to-r from-orange-400 to-rose-400;
-  /* @apply bg-[#edf2f4]; */
+  /* @apply bg-gradient-to-r from-orange-400 to-rose-400; */
+  @apply bg-[#fbfbfb];
+}
+
+.nav-col{
+  @apply bg-[#1d1d1f] bg-opacity-80
 }
 
 .secondary-col {
-  @apply bg-[#edf2f4];
+  @apply bg-[#f5f5f7];
   /* @apply bg-[#e9ecef]; */
 }
 /*  */
