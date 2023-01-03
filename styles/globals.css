@@ -9,7 +9,6 @@ body {
   /* font-family: 'Manrope', sans-serif; */
   font-family: 'CeraPro';
   /* font-family: 'SF Pro Display', sans-serif; */
-                                                
   /* font-family: 'Merienda', cursive; */
   overflow-x: hidden;
   background: #fbfbfb;
@@ -64,8 +63,12 @@ a {
 }
 /*  */
 .theme-col {
-  /* @apply bg-gradient-to-r from-orange-400 to-rose-400; */
-  @apply bg-[#fbfbfb];
+  /* @apply bg-[#fbfbfb]; */
+  @apply bg-[#f5f5f7];
+}
+
+.font-two {
+ font-family: 'SF Pro Display', sans-serif;
 }
 
 .nav-col{
@@ -74,6 +77,10 @@ a {
 
 .secondary-col {
   @apply bg-[#f5f5f7];
+  /* @apply bg-[#e9ecef]; */
+}
+.plus-col {
+  @apply bg-gradient-to-r from-orange-300 to-rose-300;
   /* @apply bg-[#e9ecef]; */
 }
 /*  */

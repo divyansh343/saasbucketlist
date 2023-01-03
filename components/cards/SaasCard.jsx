@@ -11,7 +11,7 @@ const SaasCard = ({ isfor, color, baseCol, iname, subs, description, img }) => {
     <div className=' my-3'>
       <article
         style={{ "boxShadow": "0 4px 30px rgba(0, 0, 0, 0.1)", "backdropFilter": "blur(4.6px)", "WebkitBackdropFilter": "blur(4.6px)", }}
-        className={`rounded-[6px] ${baseCol ? " theme-col" : "seacondary-col"} 
+        className={`rounded-[6px] ${baseCol ? " plus-col" : "theme-col"} 
         border-[0.5px]
         ${baseCol ? null : "p-[0.1px]"}
         border-gray-400
@@ -20,30 +20,30 @@ const SaasCard = ({ isfor, color, baseCol, iname, subs, description, img }) => {
       >
 
         <div onClickCapture={() => show ? setshow(false) : setshow(true)}
-          style={{ "boxShadow": "0 4px 30px rgba(0, 0, 0, 0.1)", "backdropFilter": "blur(4.6px)", "WebkitBackdropFilter": "blur(4.6px)", }}
+          
           className={`
         rounded-[6px]
-        ${baseCol ? "theme-col" : "secondary-col"}
+        ${baseCol ? "plus-col" : "theme-col"}
           pt-[10px] px-[4px] sm:p-6
           `}>
-          <div className='grid place-items-center lg:place-items-start my-2 lg:my-0 '>
-            <Image width={250} height={120} src={img || saas} alt='lawda ka saas' ></Image>
-          </div>
           <div className='text-start pb-2'>
-            <p className='text-[16px] lg:text-[18px] font-normal mx-3 mt-2  text-[#0f1419] underline decoration-red-500 '>{iname}       </p>
+            <p className='text-[16px] lg:text-[18px] font-semibold mx-3 my-2  text-[#0f1419]  tracking-wide'>{iname}       </p>
           </div>
 
           {
             show ?
-              <>
+            <>
+            <div className='grid place-items-center lg:place-items-start my-2 lg:my-0 '>
+              <Image width={250} height={120} src={img || saas} alt='lawda ka saas' ></Image>
+            </div>
                 <div>
                   <div className='text-start'>
-                    <p className='font-[Assistant] tracking-wide text-[14px] lg:text-[17px] mt-2 mx-2'>{truncate(description, 150)}</p>
+                    <p className='tracking-wide text-[14px] font-two lg:text-[17px] mt-2 mx-2'>{description ? truncate(description, 150) : null}</p>
                   </div>
                   <div className={`text-start  ${!baseCol ? "theme-col" : "bg-gray-50"} mb-1  p-2 rounded-[2px] mt-2`}>
                     <div className='text-[14px] lg:text-[18px] tracking-wide'>
                       <div>
-                        <p>
+                        <p className="font-two">
                         For - <span>Developers</span>
                         </p>
                       </div>
