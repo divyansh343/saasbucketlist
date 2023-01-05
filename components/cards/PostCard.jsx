@@ -5,7 +5,6 @@ const PostCard = ({ text, redirectLink, spd }) => {
     <div>
       <div className={`
       ${spd ? "plus-col hover:bg-gray-600":"bg-white hover:bg-slate-50 "}
-        drop-shadow-md
       hover:drop-shadow
        cursor-pointer  rounded-[2px] my-2 lg:my-3 `}>
           <div className='py-2 lg:ml-8 mx-3'>

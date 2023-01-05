@@ -14,7 +14,7 @@ const SaasList = () => {
           {
             data.map(item => (
               <>
-                <SaasCard key={item.id} iname={item.saas} description={item.description} isfor={item.for} img={item.img} baseCol={item.plus} />
+                <SaasCard key={item.id} iname={item.saas} link={item.link} description={item.description} isfor={item.for} img={item.img} baseCol={item.plus} />
               </>
             ))
           }
