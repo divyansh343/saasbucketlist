@@ -14,19 +14,19 @@ const SaasList = () => {
           {
             data.map(item => (
               <>
-                <SaasCard iname={item.saas} description={item.description} img={item.img} baseCol />
+                <SaasCard key={item.id} iname={item.saas} description={item.description} isfor={item.for} img={item.img} baseCol={item.plus} />
               </>
             ))
           }
   
-          <SaasCard iname="Copy.AI" subs="Freemium" />
+          {/* <SaasCard iname="Copy.AI" subs="Freemium" />
           <SaasCard iname="Copy.AI" subs="Paid" />
           <SaasCard iname="Copy.AI" subs="Free" baseCol color="text-black" isfor="Developers" />
           <SaasCard iname="chut.AI" subs="Free" baseCol color="text-black" isfor="Solopreneuers" />
           <SaasCard iname="huut.AI" subs="Free" baseCol color="text-black" isfor="Developers" />
           <SaasCard iname="Copy.AI" subs="Freemium" />
           <SaasCard iname="Copy.AI" subs="Paid" />
-          <SaasCard iname="Copy.AI" subs="Paid" />
+          <SaasCard iname="Copy.AI" subs="Paid" /> */}
         </div>
       </div>
     )

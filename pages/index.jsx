@@ -6,7 +6,8 @@ export default function Home() {
   return (
     <>
       {
-        isMobile ? <div className="h-full">
+        isMobile ? 
+        <div className="mt-60">
         coming soon
         </div>
           :
