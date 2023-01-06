@@ -70,16 +70,16 @@ const Onboarding = () => {
                         </div>
                         {/* designer */}
 
-                        <div onClickCapture={() => setSelected("indiehacker")}>
+                        <div onClickCapture={() => setSelected("indiemaker")}>
                           <div className=''>
                             <div className={`rounded-[4px] border-[2px]
                   my-2 
                   lg:mx-2 
                   cursor-pointer
-                  ${selected === "indiehacker" ? "bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb]" : null}
+                  ${selected === "indiemaker" ? "bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb]" : null}
                   `}>
                               <div className='grid place-items-center'>
-                                <p className='text-[30px] mx-3 lg:text-[60px] font-semibold'>Indie Hacker</p>
+                                <p className='text-[30px] mx-3 lg:text-[60px] font-semibold'>Indie Maker</p>
                               </div>
                             </div>
                           </div>
