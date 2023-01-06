@@ -1,13 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html,
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
 body {
   padding: 0;
   margin: 0;
   /* font-family: "Sarabun", sans-serif; */
   /* font-family: 'Manrope', sans-serif; */
-  font-family: 'CeraPro';
+  font-family: "CeraPro";
   /* font-family: 'SF Pro Display', sans-serif; */
   /* font-family: 'Merienda', cursive; */
   overflow-x: hidden;
@@ -40,24 +43,23 @@ a {
 
 /*  */
 
-
 @font-face {
   font-family: "CeraPro";
-  src: url('../assets/fonts/Cera-Pro-Black.ttf');
+  src: url("../assets/fonts/Cera-Pro-Black.ttf");
   font-weight: normal;
   font-style: normal;
 }
-  
+
 @font-face {
   font-family: "CeraPro";
-  src: url('../assets/fonts/Cera-Pro-Bold.ttf');
+  src: url("../assets/fonts/Cera-Pro-Bold.ttf");
   font-weight: bold;
   font-style: normal;
 }
-  
+
 @font-face {
   font-family: "CeraPro";
-  src: url('../assets/fonts/Cera-Pro-Black-Italic.ttf');
+  src: url("../assets/fonts/Cera-Pro-Black-Italic.ttf");
   font-weight: normal;
   font-style: italic;
 }
@@ -68,14 +70,14 @@ a {
 }
 
 .font-one {
-  font-family: 'CeraPro'
+  font-family: "CeraPro";
 }
 .font-two {
- font-family: 'SF Pro Display', sans-serif;
+  font-family: "SF Pro Display", sans-serif;
 }
 
-.nav-col{
-  @apply bg-[#1d1d1f] bg-opacity-80
+.nav-col {
+  @apply bg-[#1d1d1f] bg-opacity-80;
 }
 
 .secondary-col {

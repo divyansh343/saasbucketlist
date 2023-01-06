@@ -1,58 +1,60 @@
 import ReactTypingEffect from "react-typing-effect";
 import { isMobile } from 'react-device-detect';
 import Image from "next/image";
+import Hero from "../components/landing/Hero";
+import SaasSection from "../components/landing/SaasSection";
+import Testimonials from "../components/landing/Testimonials";
 export default function Home() {
-  
+
   return (
     <>
-      {
-        isMobile ? 
-        <div className="mt-60">
-        coming soon
-        </div>
-          :
-          <div className='mt-16 '>
-            <div className="theme-col  py-[61px] pl-[70px] ">
-              <div className="grid grid-cols-2">
-                <div className="col-span-1">
-                  <div className="mb-5">
-                    <p className="text-[25px] lg:text-[56px]">Dive into Saas 
-                    <span className="ml-[12px] my-2 bg-[#E3B4FA] rounded-[16px] p-[8px]">Realm</span>
-                    </p>
+      <div className="mt-16 font-two">
+        <Hero />
+        <SaasSection />
+        <SaasSection />
+        <Testimonials />
+        <div>
+          <section class="py-10 bg-gray-100 sm:py-16 lg:py-24">
+            <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+              <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Get full access to Celebration</h2>
+                <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+              </div>
+
+              <form action="#" method="POST" class="max-w-xl mx-auto mt-12">
+                <div class="flex flex-col items-center sm:flex-row sm:justify-center">
+                  <div class="flex-1 w-full min-w-0 px-4 sm:px-0">
+                    <label for="email" class="sr-only"></label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Enter email to get started"
+                      class="block w-full px-4 py-4 text-base text-black placeholder-gray-500 transition-all duration-200 border-transparent rounded-md caret-indigo-600 focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600"
+                      required
+                    />
                   </div>
-                  <div className="mt-[5px] -ml-2">
-                    <p className="text-[25px] lg:text-[56px]">
-                      <span className="bg-[#FFCD9F] my-2 rounded-[16px] p-[8px]">Unique</span>
-                      <span className="ml-[12px] my-2 bg-[#E3B4FA] rounded-[16px] p-[8px]">Classification</span></p>
-                  </div>
-                  <div className="mt-8 -ml-2">
-                    <p className="text-[25px] lg:text-[56px]">
-                      for
-                      <span className="bg-[#E3B4FA] my-2 ml-4 rounded-[16px] p-[8px] font-medium">
-                        <ReactTypingEffect
-                          typingDelay={200}
-                          speed={30}
-                          eraseSpeed={30}
-                          eraseDelay={1500}
-                          text={[
-                            `Developer`,
-                            `Designer`,
-                            `Content Creator`,
-                            `Marketer`,
-                            `Solopreneour`,
-                          ]}
-                        />
-                      </span>
-                    </p>
-                  </div>
+
+                  <button type="submit" class="inline-flex items-center justify-center w-auto px-4 py-4 mt-4 font-semibold text-white transition-all duration-200 bg-indigo-600 border border-transparent rounded-md sm:ml-4 sm:mt-0 sm:w-auto hover:bg-indigo-700 focus:bg-indigo-700">
+                    Get instant access
+                    <svg class="w-5 h-5 ml-3 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
                 </div>
-                <div className="col-span-1">
-                    <Image src="/images/hero.png" height={500} width={500} alt="hero" />
-                </div>
+              </form>
+
+              <div class="flex items-center justify-center px-8 mt-8 sm:px-0">
+                <svg class="flex-shrink-0 w-5 h-5 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span class="ml-2 text-sm text-gray-600"> Your data is complely secured with us. We don’t share with anyone. </span>
               </div>
             </div>
-          </div>
-      }
+          </section>
+
+        </div>
+      </div>
     </>
   )
 }
