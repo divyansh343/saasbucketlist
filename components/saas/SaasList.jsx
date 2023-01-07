@@ -18,7 +18,7 @@ const SaasList = () => {
   useEffect(() => {
     var config = {
       method: 'get',
-      url: process.env.GET_SAAS,
+      url: "https://saaslist.netlify.app/api/saas",
       headers: {}
     };
     setLoading(true)
