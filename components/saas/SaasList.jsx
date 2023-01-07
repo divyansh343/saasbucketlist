@@ -1,4 +1,5 @@
 import axios from 'axios'
+import NextAuth from 'next-auth/next'
 import { useSession } from 'next-auth/react'
 import React, { useEffect, useState } from 'react'
 import ReactPaginate from 'react-paginate'
@@ -17,7 +18,7 @@ const SaasList = () => {
   useEffect(() => {
     var config = {
       method: 'get',
-      url: 'http://localhost:3000/api/saas',
+      url: `https://saaslist.netlify.app/api/saas`,
       headers: {}
     };
     setLoading(true)
