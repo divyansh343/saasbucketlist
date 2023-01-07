@@ -11,14 +11,14 @@ const SaasList = () => {
   const [loading, setLoading] = useState(false);
   const [saasList, setSaaslist] = useState([])
   const [info, setinfo] = useState({
-    limit : null,
-    page : null,
+    limit: null,
+    page: null,
   })
 
   useEffect(() => {
     var config = {
       method: 'get',
-      url: `https://saaslist.netlify.app/api/saas`,
+      url: process.env.GET_SAAS,
       headers: {}
     };
     setLoading(true)
@@ -27,8 +27,8 @@ const SaasList = () => {
         // console.log(response);
         setSaaslist(response.data.data)
         setinfo({
-          limit : response.data.limit,
-          page : response.data.page
+          limit: response.data.limit,
+          page: response.data.page
         })
         setLoading(false)
       })
@@ -38,17 +38,17 @@ const SaasList = () => {
       });
   }, [])
 
-//   const pagginationHandler = (page) => {
-//     const currentPath = props.router.pathname;
-//     const currentQuery = { ...props.router.query };
-//     currentQuery.page = page.selected + 1;
+  //   const pagginationHandler = (page) => {
+  //     const currentPath = props.router.pathname;
+  //     const currentQuery = { ...props.router.query };
+  //     currentQuery.page = page.selected + 1;
 
-//     props.router.push({
-//         pathname: currentPath,
-//         query: currentQuery,
-//     });
+  //     props.router.push({
+  //         pathname: currentPath,
+  //         query: currentQuery,
+  //     });
 
-// };
+  // };
 
   if (status === "authenticated") {
     return (
@@ -77,7 +77,7 @@ const SaasList = () => {
                     </>
                   ))
                 }
-                  {/* <ReactPaginate
+                {/* <ReactPaginate
                     previousLabel={'previous'}
                     nextLabel={'next'}
                     breakLabel={'...'}
