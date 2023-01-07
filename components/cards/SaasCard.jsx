@@ -8,6 +8,22 @@ import saas from '../../assets/images/saas.png'
 import TypeList from '../saas/TypeList';
 const SaasCard = ({ isfor, color, baseCol, iname, description, img, link }) => {
   const [show, setshow] = useState(false)
+  
+  const ReadMore = ({ children }) => {
+    const text = children;
+    const [isReadMore, setIsReadMore] = useState(true);
+    const toggleReadMore = () => {
+      setIsReadMore(!isReadMore);
+    };
+    return (
+      <p className="text">
+        {isReadMore ? text.slice(0, 160) : text}
+        <span onClick={toggleReadMore} className="cursor-pointer text-sm font-semibold text-zinc-600 font-one hover:underline mx-2">
+          {isReadMore ? "...read more" : " show less"}
+        </span>
+      </p>
+    );
+  };
 
   const typeVal = () => {
     let value = 0;
@@ -85,7 +101,12 @@ const SaasCard = ({ isfor, color, baseCol, iname, description, img, link }) => {
                 </div>
                 <div>
                   <div className='text-start'>
-                    <p className='tracking-wide text-[14px] font-two lg:text-[17px] mt-2 mx-2'>{description ? truncate(description, 150) : null}</p>
+                    <p className='tracking-wide text-[14px] font-two lg:text-[17px] mt-2 mx-2'>
+                      <ReadMore>
+                        {truncate(description, 300)}
+                      </ReadMore>
+                    </p>
+                   
                   </div>
 
                   <div className='mt-[20px] mx-2'>

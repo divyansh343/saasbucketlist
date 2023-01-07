@@ -1,10 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html {
-  --scroll-behavior: smooth !important;
-  scroll-behavior: smooth !important;
-}
+
 body {
   padding: 0;
   margin: 0;
@@ -31,15 +28,16 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media () {
   html {
-    color-scheme: dark;
+    scroll-behavior: smooth !important;
+
   }
   body {
     color: #1d1d1f;
     background: black;
   }
-}
+} */
 
 /*  */
 
