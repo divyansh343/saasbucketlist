@@ -12,12 +12,12 @@ const Onboarding = () => {
   const [proSelected, setProSelected] = useState("")
   const [codingState, setCoding] = useState(null)
 
-  const changeModal = () => {
+  const changeModal = (msg,changeTo) => {
     if (selected === "") {
       toast('Choose one', { icon: '🔎', })
     } else {
-      toast.success('Cool!')
-      setModalState("2")
+      toast.success(msg)
+      setModalState(changeTo)
     }
   }
 
@@ -131,7 +131,7 @@ const Onboarding = () => {
                     </div>
                   </div>
                   <div className='grid place-items-end'>
-                    <div onClick={changeModal} className='py-1 px-3 bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb] rounded-[4px] mr-28 mb-5 cursor-pointer'>
+                    <div onClick={()=>changeModal("Cool!","2")} className='py-1 px-3 bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb] rounded-[4px] mr-28 mb-5 cursor-pointer'>
                       <p className='text-[20px]'>
                         Next
                       </p>
@@ -151,7 +151,7 @@ const Onboarding = () => {
                       </ul>
                     </div>
                     <div className='mt-[40px]' >
-                      <p className='text-[30px] lg:text-[60px] font-semibold'>Do you <span className=' bg-slate-700 text-white font-mono rounded-[4px] px-2'> Code  </span> </p>
+                      <p className='text-[30px] lg:text-[60px] font-semibold'>Do you <span className=' bg-slate-700 text-white font-mono rounded-[4px] px-2'> 🧑‍💻Code  </span> </p>
                     </div>
                     <div className='mt-4 mb-10'>
                       <div className='grid lg:grid-cols-2'>
@@ -198,7 +198,7 @@ const Onboarding = () => {
                           Previous
                         </p>
                       </div>
-                      <div onClick={() => setModalState("3")} className='py-1 px-3 bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb] hover:bg-amber-400 rounded-[4px] mr-28 mb-20 cursor-pointer'>
+                      <div onClick={()=>changeModal("Great!","3")} className='py-1 px-3 bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb] hover:bg-amber-400 rounded-[4px] mr-28 mb-20 cursor-pointer'>
                         <p className='text-[20px]'>
                           Next
                         </p>
@@ -218,8 +218,8 @@ const Onboarding = () => {
                         <li className="step step-secondary"></li>
                       </ul>
                     </div>
-                    <div className='mt-[40px]' >
-                      <p className='text-[30px] lg:text-[60px] font-semibold'>Do you <span className=' bg-slate-700 text-white font-mono rounded-[4px] px-2'> Code  </span> </p>
+                    <div className='mt-[40px] grid place-items-center'>
+                      <p className='text-[30px] lg:text-[60px] text-center font-semibold mx-5'>Are you🚀building product</p>
                     </div>
                     <div className='mt-4 mb-10'>
                       <div className='grid lg:grid-cols-2'>
@@ -279,20 +279,15 @@ const Onboarding = () => {
                               </div>
                             </div>
                           </div>
-
                           {/* <Option title="Developer" selected={selected} /> */}
                         </div>
                         {/* developer */}
-
-
-
-
                       </div>
                     </div>
                   </div>
                   <div className='grid place-items-end'>
                     <div className='grid grid-flow-col'>
-                      <div onClick={() => setModalState("3")} className='py-1 px-3 bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb] hover:bg-amber-400 rounded-[4px] mr-2 mb-20 cursor-pointer'>
+                      <div onClick={() => setModalState("2")} className='py-1 px-3 bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb] hover:bg-amber-400 rounded-[4px] mr-2 mb-20 cursor-pointer'>
                         <p className='text-[20px]'>
                           Previous
                         </p>

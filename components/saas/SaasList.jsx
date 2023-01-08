@@ -87,27 +87,27 @@ const SaasList = () => {
               </>
               : <div className='mb-5'>
                 {
-                  saasList.map(item => (
+                  saasList.length === 0 ?
                     <>
-                      <SaasCard key={item.id} iname={item.saas} link={item.link} description={item.description} isfor={item.for} img={item.img} baseCol={item.plus} pricing={item.pricing} />
-                    </>
-                  ))
+                      <div className='grid place-items-center my-[200px]'>
+                        <div role="status" className="max-w-sm animate-pulse">
+                          <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+                          <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+                        <div className='my-5'>
+                          <p className="animate-pulse font-two text-xl">Got 0, results</p>
+                          <p className=" font-two">try searching something else</p>
+                        </div>
+                          <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+                          <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+                        </div>
+                      </div>
+                    </> :
+                    saasList.map(item => (
+                      <>
+                        <SaasCard key={item.id} iname={item.saas} link={item.link} description={item.description} isfor={item.for} img={item.img} baseCol={item.plus} pricing={item.pricing} />
+                      </>
+                    ))
                 }
-                {/* <ReactPaginate
-                    previousLabel={'previous'}
-                    nextLabel={'next'}
-                    breakLabel={'...'}
-                    breakClassName={'break-me'}
-                    activeClassName={'active'}
-                    containerClassName={'pagination'}
-                    subContainerClassName={'pages pagination'}
-
-                    initialPage={info.page - 1}
-                    pageCount={info.limit} //page count
-                    marginPagesDisplayed={2}
-                    pageRangeDisplayed={5}
-                    // onPageChange={pagginationHandler}
-                  /> */}
               </div>
           }
         </div>

@@ -1,8 +1,17 @@
 import Image from 'next/image'
 import React from 'react'
 import ReactTypingEffect from 'react-typing-effect'
-
+// import { useRouter } from 'next/router'
+// import { useSession } from 'next-auth/react'
 const Hero = () => {
+
+  // const { data: session, status } = useSession()
+  // const router = useRouter()
+
+  // if (status === "authenticated") {
+  //   router.push('/auth')
+  // } else {
+  
   return (
     <div>
       <div class="bg-gradient-to-b from-green-50 to-green-100">
@@ -56,6 +65,6 @@ const Hero = () => {
 
     </div>
   )
-}
+} 
 
 export default Hero
