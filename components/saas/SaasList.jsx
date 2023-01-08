@@ -9,25 +9,35 @@ const SaasList = () => {
   const { data: session, status } = useSession({ required: true })
   const [loading, setLoading] = useState(false);
   const [saasList, setSaaslist] = useState([])
+  const [searchQuery, setSearchQuery] = useState("")
   const [info, setinfo] = useState({
-    limit : null,
-    page : null,
+    limit: null,
+    page: null,
   })
+  const url = () => {
+    if (searchQuery === "") {
+      return process.env.NEXT_PUBLIC_GET_SAAS;
+    } else {
+      const searchTerm = `?search=${searchQuery}`
+      console.log(searchTerm)
+      return process.env.NEXT_PUBLIC_GET_SAAS + searchTerm;
+    }
+  }
+  // searchQuery ? process.env.NEXT_PUBLIC_GET_SAAS + `?search=${searchQuery}` : 
+  var config = {
+    method: 'get',
+    url: url(),
+    headers: {}
+  };
 
-  useEffect(() => {
-    var config = {
-      method: 'get',
-      url: 'http://localhost:3000/api/saas',
-      headers: {}
-    };
+  const handleSearch = async () => {
     setLoading(true)
     axios(config)
       .then(function (response) {
-        // console.log(response);
         setSaaslist(response.data.data)
         setinfo({
-          limit : response.data.limit,
-          page : response.data.page
+          limit: response.data.limit,
+          page: response.data.page
         })
         setLoading(false)
       })
@@ -35,23 +45,30 @@ const SaasList = () => {
         console.log(error);
         setLoading(false)
       });
+  }
+
+  useEffect(() => {
+    handleSearch()
   }, [])
 
-//   const pagginationHandler = (page) => {
-//     const currentPath = props.router.pathname;
-//     const currentQuery = { ...props.router.query };
-//     currentQuery.page = page.selected + 1;
+  //   const pagginationHandler = (page) => {
+  //     const currentPath = props.router.pathname;
+  //     const currentQuery = { ...props.router.query };
+  //     currentQuery.page = page.selected + 1;
+  //     props.router.push({
+  //         pathname: currentPath,
+  //         query: currentQuery,
+  //     });
 
-//     props.router.push({
-//         pathname: currentPath,
-//         query: currentQuery,
-//     });
-
-// };
+  // };
 
   if (status === "authenticated") {
     return (
       <div className='mx-[0px] md:mx-[50px] lg:ml-[100px] lg:pr-[100px] mt-8'>
+        <div className='grid grid-flow-col gap-0 place-items-center md:place-items-end pt-2 lg:pt-3 my-2 lg:my-3'>
+          <input type="text" value={searchQuery} onChange={e => setSearchQuery(e.target.value)} placeholder="Search here" className="input input-bordered input-info w-full max-w-xs font-two text-gray-500" />
+          <button onClick={handleSearch} className="btn btn-md font-two normal-case font-medium">Search</button>
+        </div>
         <div className=' grid grid-flow-row'>
           {
             loading ?
@@ -76,7 +93,7 @@ const SaasList = () => {
                     </>
                   ))
                 }
-                  {/* <ReactPaginate
+                {/* <ReactPaginate
                     previousLabel={'previous'}
                     nextLabel={'next'}
                     breakLabel={'...'}
