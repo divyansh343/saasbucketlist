@@ -6,9 +6,9 @@ import { BsArrowUpSquare } from 'react-icons/bs';
 
 import saas from '../../assets/images/saas.png'
 import TypeList from '../saas/TypeList';
-const SaasCard = ({ isfor, color, baseCol, iname, description, img, link }) => {
+const SaasCard = ({ isfor, color, baseCol, iname, description, img, link, pricing }) => {
   const [show, setshow] = useState(false)
-  
+
   const ReadMore = ({ children }) => {
     const text = children;
     const [isReadMore, setIsReadMore] = useState(true);
@@ -63,6 +63,14 @@ const SaasCard = ({ isfor, color, baseCol, iname, description, img, link }) => {
 
               <div className='col-span-1'>
                 <p className='text-[16px] lg:text-[18px] font-two font-semibold mx-3 my-2  text-[#0f1419]  tracking-wide'>{iname}
+                  {
+                    isMobile ? null :
+                      <span className='mx-2'>
+                        {/* <div className="badge badge-md font-two">{pricing}</div> */}
+
+                        <kbd className="kbd kbd-sm font-two font-normal bg-gray-800 text-white">{pricing}</kbd>
+                      </span>
+                  }
                 </p>
               </div>
 
@@ -98,15 +106,25 @@ const SaasCard = ({ isfor, color, baseCol, iname, description, img, link }) => {
                       blurDataURL="/images/load.jpg"
                       alt={iname + "image "} ></Image>
                   </div>
+
+                </div>
+                <div className='mx-2 lg:my-2 grid place-items-start'>
+                  <p className='font-two text-[16px] cursor-pointer'>
+                    <span>
+                      Pricing -
+                    </span>
+                    <span> <kbd className="kbd kbd-sm font-two font-normal text-[16px] bg-gray-800 text-white  hover:drop-shadow">{pricing}</kbd></span>
+                  </p>
                 </div>
                 <div>
                   <div className='text-start'>
                     <p className='tracking-wide text-[14px] font-two lg:text-[17px] mt-2 mx-2'>
                       <ReadMore>
-                        {truncate(description, 300)}
+                        {/* {truncate(description, 300)} */}
+                        {description}
                       </ReadMore>
                     </p>
-                   
+
                   </div>
 
                   <div className='mt-[20px] mx-2'>
@@ -124,15 +142,16 @@ const SaasCard = ({ isfor, color, baseCol, iname, description, img, link }) => {
                   </div>
 
                   <div className='grid place-items-end my-1'>
-                    <span 
-                    onClickCapture={() => show ? setshow(false) : setshow(true)}
-                    className='mr-3 lg:mr-7 border-gray-400 border-[0.1px] p-2 rounded-2xl 
+                    <span
+                      onClickCapture={() => show ? setshow(false) : setshow(true)}
+                      className='mr-3 lg:mr-7 border-gray-400 border-[0.1px] p-2 rounded-2xl 
                     hover:scale-105
-                    bg-gray-400'>
+                    text-white
+                    bg-gray-800'>
                       <BsArrowUpSquare />
                     </span>
                   </div>
-                  <div className={`text-start  ${!baseCol ? "theme-col" : "bg-gray-50"} mb-1  p-2 rounded-[2px] mt-2`}>
+                  <div className={`text-start  ${!baseCol ? "theme-col" : "theme-col"} mb-1  p-2 rounded-[2px] mt-2`}>
                     <div className='text-[14px] lg:text-[18px] tracking-wide'>
                       <div>
                         <div className='grid place-items-start'>

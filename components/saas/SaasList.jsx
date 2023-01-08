@@ -85,11 +85,11 @@ const SaasList = () => {
                   </div>
                 </div>
               </>
-              : <>
+              : <div className='mb-5'>
                 {
                   saasList.map(item => (
                     <>
-                      <SaasCard key={item.id} iname={item.saas} link={item.link} description={item.description} isfor={item.for} img={item.img} baseCol={item.plus} />
+                      <SaasCard key={item.id} iname={item.saas} link={item.link} description={item.description} isfor={item.for} img={item.img} baseCol={item.plus} pricing={item.pricing} />
                     </>
                   ))
                 }
@@ -108,7 +108,7 @@ const SaasList = () => {
                     pageRangeDisplayed={5}
                     // onPageChange={pagginationHandler}
                   /> */}
-              </>
+              </div>
           }
         </div>
       </div>
