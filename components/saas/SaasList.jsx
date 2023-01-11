@@ -104,7 +104,7 @@ const SaasList = () => {
                     </> :
                     saasList.map(item => (
                       <>
-                        <SaasCard key={item.id} iname={item.saas} link={item.link} description={item.description} isfor={item.for} img={item.img} baseCol={item.plus} pricing={item.pricing} />
+                        <SaasCard key={item.id} iname={item.saas} link={item.link} description={item.description} isfor={item.for} img={item.img} baseCol={item.plus} pricing={item.pricing} why={item.why} />
                       </>
                     ))
                 }

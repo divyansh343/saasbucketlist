@@ -6,24 +6,9 @@ import { BsArrowUpSquare } from 'react-icons/bs';
 
 import saas from '../../assets/images/saas.png'
 import TypeList from '../saas/TypeList';
-const SaasCard = ({ isfor, color, baseCol, iname, description, img, link, pricing }) => {
+import ReadMore from '../utils/ReadMore';
+const SaasCard = ({ isfor, color, baseCol, iname, description, img, link, pricing, why }) => {
   const [show, setshow] = useState(false)
-
-  const ReadMore = ({ children }) => {
-    const text = children;
-    const [isReadMore, setIsReadMore] = useState(true);
-    const toggleReadMore = () => {
-      setIsReadMore(!isReadMore);
-    };
-    return (
-      <p className="text">
-        {isReadMore ? text.slice(0, 160) : text}
-        <span onClick={toggleReadMore} className="cursor-pointer text-sm font-semibold text-zinc-600 font-one hover:underline mx-2">
-          {isReadMore ? "...read more" : " show less"}
-        </span>
-      </p>
-    );
-  };
 
   const typeVal = () => {
     let value = 0;
@@ -34,9 +19,8 @@ const SaasCard = ({ isfor, color, baseCol, iname, description, img, link, pricin
     }
     return value
   }
-
-  function truncate(str, n) {
-    return (str.length > n) ? str.slice(0, n - 1) + '...' : str;
+  function truncate(n) {
+    return (why) ? why.slice(0, n - 1) + '...' : why;
   };
 
   return (
@@ -62,14 +46,23 @@ const SaasCard = ({ isfor, color, baseCol, iname, description, img, link, pricin
             <div className='grid grid-cols-2 lg:grid-cols-3'>
 
               <div className='col-span-1'>
-                <p className='text-[16px] lg:text-[18px] font-two font-semibold mx-3 my-2  text-[#0f1419]  tracking-wide'>{iname}
+                <p className='text-[16px] lg:text-[18px] font-two font-medium mx-3  text-[#0f1419]  tracking-wide'>{iname}
                   {
                     isMobile ? null :
                       <span className='mx-2'>
                         {/* <div className="badge badge-md font-two">{pricing}</div> */}
 
-                        <kbd className="kbd kbd-sm font-two font-normal bg-gray-800 text-white">{pricing}</kbd>
+                        <kbd className="kbd kbd-sm font-two font-normal bg-gray-700 text-white">{pricing}</kbd>
                       </span>
+                  }
+                </p>
+                <p className='text-[13px] lg:text-[15px] lg:mt-[2px] text-gray-600 font-two mx-3'>
+                  {isMobile
+                    ? <>
+                      {!show ?
+                          <>{truncate(18)}</>
+                          : <>{why}</>}</>
+                    : <>{why}</>
                   }
                 </p>
               </div>
@@ -113,7 +106,7 @@ const SaasCard = ({ isfor, color, baseCol, iname, description, img, link, pricin
                     <span>
                       Pricing -
                     </span>
-                    <span> <kbd className="kbd kbd-sm font-two font-normal text-[16px] bg-gray-800 text-white  hover:drop-shadow">{pricing}</kbd></span>
+                    <span> <kbd className="kbd kbd-sm font-two font-normal text-[16px] bg-gray-600 text-white  hover:drop-shadow">{pricing}</kbd></span>
                   </p>
                 </div>
                 <div>
@@ -147,7 +140,7 @@ const SaasCard = ({ isfor, color, baseCol, iname, description, img, link, pricin
                       className='mr-3 lg:mr-7 border-gray-400 border-[0.1px] p-2 rounded-2xl 
                     hover:scale-105
                     text-white
-                    bg-gray-800'>
+                    bg-gray-700'>
                       <BsArrowUpSquare />
                     </span>
                   </div>

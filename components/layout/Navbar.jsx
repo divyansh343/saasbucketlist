@@ -18,7 +18,7 @@ const Navbar = () => {
     <div className={`navbar fixed top-0 z-10 border-b-[0.2px] border-gray-800 font-two ${status==="authenticated"?"plus-col":"theme-col"} `}>
       <div className="flex-1">
         <Link href="/">
-          <p className="btn btn-ghost normal-case text-xl tracking-wide">SaasBucketList</p>
+          <p className="btn btn-ghost normal-case text-xl font-one tracking-wide">IndieMag</p>
         </Link>
       </div>
       <div className="flex-none">
@@ -54,6 +54,9 @@ const Navbar = () => {
             <Link href="/posts" className=''>
               <li><p>Posts</p></li>
             </Link>
+            <Link href="/twitter" className=''>
+              <li><p>Twitter</p></li>
+            </Link>
             {
               session ?
                 <li><p onClick={userLogout}>Logout</p></li> : null
@@ -64,5 +67,4 @@ const Navbar = () => {
     </div>
   )
 }
-
 export default Navbar
