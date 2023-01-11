@@ -1,12 +1,11 @@
 import axios from 'axios'
 import { useSession } from 'next-auth/react'
 import React, { useEffect, useState } from 'react'
-import ReactPaginate from 'react-paginate'
 import LoginComponent from '../auth/LoginComponent'
 import SaasCard from '../cards/SaasCard'
 
 const SaasList = () => {
-  const { data: session, status } = useSession({ required: true })
+  const { data: session, status } = useSession()
   const [loading, setLoading] = useState(false);
   const [saasList, setSaaslist] = useState([])
   const [searchQuery, setSearchQuery] = useState("")
@@ -19,11 +18,9 @@ const SaasList = () => {
       return process.env.NEXT_PUBLIC_GET_SAAS;
     } else {
       const searchTerm = `?search=${searchQuery}`
-      console.log(searchTerm)
       return process.env.NEXT_PUBLIC_GET_SAAS + searchTerm;
     }
   }
-  // searchQuery ? process.env.NEXT_PUBLIC_GET_SAAS + `?search=${searchQuery}` : 
   var config = {
     method: 'get',
     url: url(),
@@ -65,9 +62,9 @@ const SaasList = () => {
   if (status === "authenticated") {
     return (
       <div className='mx-[0px] md:mx-[50px] lg:ml-[100px] lg:pr-[100px] mt-8'>
-        <div className='grid grid-flow-col gap-0 place-items-center md:place-items-end pt-2 lg:pt-3 my-2 lg:my-3'>
-          <input type="text" value={searchQuery} onChange={e => setSearchQuery(e.target.value)} placeholder="Search here" className="input input-bordered input-info w-full max-w-xs font-two text-gray-500" />
-          <button onClick={handleSearch} className="btn btn-md font-two normal-case font-medium">Search</button>
+        <div className='grid grid-flow-col gap-0 place-items-center md:place-items-end pt-2 mx-1 lg:pt-3 my-2 lg:my-3'>
+          <input type="text" value={searchQuery} onChange={e => setSearchQuery(e.target.value)} placeholder="ex. chatbot" className="input input-warning input-sm lg:input-md w-full max-w-xs sm font-two text-gray-500" />
+          <button onClick={handleSearch} className="btn btn-sm lg:btn-md font-two pla normal-case font-medium">Search</button>
         </div>
         <div className=' grid grid-flow-row'>
           {
@@ -113,6 +110,10 @@ const SaasList = () => {
         </div>
       </div>
     )
-  } else <LoginComponent />
+  } else{
+    return(
+      <LoginComponent />
+    )
+  } 
 }
 export default SaasList

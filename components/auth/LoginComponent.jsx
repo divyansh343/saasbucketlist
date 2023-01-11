@@ -26,10 +26,10 @@ if (session) {
                 <div className="space-y-4">
                   {/* <Image height={50} width={50} src="https://tailus.io/sources/blocks/social/preview/images/icon.svg" loading="lazy" className="w-10" alt="tailus logo" /> */}
                   {
-                    router.pathname === "/login" ?
-                    <h2 className="mb-8 text-2xl text-cyan-900 font-bold text-center font-two tracking-wide">Log in</h2>
-                    :
+                    router.pathname === "/auth" ?
                     <h2 className="mb-8 text-2xl text-cyan-900 font-bold text-center font-two tracking-wide">⚡Supercharge your journey with <span className=''> 🚀Indiemake</span> </h2>
+                    :
+                    <h2 className="mb-8 text-2xl text-cyan-900 font-bold text-center font-two tracking-wide">Log in / Sign up</h2>
                   }
                 </div>
                 <div className="mt-16 grid space-y-4">

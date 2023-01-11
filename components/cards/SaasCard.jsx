@@ -24,7 +24,7 @@ const SaasCard = ({ isfor, color, baseCol, iname, description, img, link, pricin
   };
 
   return (
-    <div className=' my-[6px]'>
+    <div className='my-[7px] lg:my-[9px] saturate-150'>
       <article
         style={{ "boxShadow": "0 4px 30px rgba(0, 0, 0, 0.1)", "backdropFilter": "blur(4.6px)", "WebkitBackdropFilter": "blur(4.6px)", }}
         className={`rounded-[6px] ${baseCol ? " plus-col" : "theme-col"} 
@@ -41,7 +41,7 @@ const SaasCard = ({ isfor, color, baseCol, iname, description, img, link, pricin
           pt-[10px] px-[4px] sm:p-6
           `}>
           <div
-            onClickCapture={() => show ? setshow(false) : setshow(true)}
+            onClick={() => show ? setshow(false) : setshow(true)}
             className='text-start pb-2'>
             <div className='grid grid-cols-2 lg:grid-cols-3'>
 
@@ -56,12 +56,12 @@ const SaasCard = ({ isfor, color, baseCol, iname, description, img, link, pricin
                       </span>
                   }
                 </p>
-                <p className='text-[13px] lg:text-[15px] lg:mt-[2px] text-gray-600 font-two mx-3'>
+                <p className='text-[13px] lg:text-[14px] lg:mt-[2px] text-gray-600 font-two mx-3'>
                   {isMobile
                     ? <>
                       {!show ?
-                          <>{truncate(18)}</>
-                          : <>{why}</>}</>
+                        <>{truncate(18)}</>
+                        : <>{why}</>}</>
                     : <>{why}</>
                   }
                 </p>
@@ -96,7 +96,6 @@ const SaasCard = ({ isfor, color, baseCol, iname, description, img, link, pricin
                       className="rounded-[6px]
                       border-[2px] border-gray-200
                       "
-                      blurDataURL="/images/load.jpg"
                       alt={iname + "image "} ></Image>
                   </div>
 

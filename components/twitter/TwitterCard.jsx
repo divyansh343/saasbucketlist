@@ -10,12 +10,12 @@ import profile from '../../assets/images/profile.png'
 const TwitterCard = ({ name, bio, hashtags, followers, site_link, twitter_link, github_link, }) => {
   return (
     <div>
-      <div className=' rounded-[4px]   border-[0.2px] font-two p-2'>
+      <div className=' rounded-[4px]   border-[1px] font-two p-2'>
         <div className='grid grid-cols-4 lg:grid-cols-6'>
           <div className='col-span-1'>
           <a href={twitter_link} target="_blank" rel="noreferrer">
-            <div>
-              <Image height={isMobile ? 60 : 80} width={isMobile ? 60 : 80} className=" rounded-full m-2 lg:m-4" src={profile} alt='jkln' />
+            <div className='rounded-[13px]'>
+              <Image height={isMobile ? 60 : 80} width={isMobile ? 60 : 80} className=" roudned-full m-2 lg:m-4" src={profile} alt={name + "twitter profile"} />
             </div>
             </a>
             <div>
@@ -38,7 +38,7 @@ const TwitterCard = ({ name, bio, hashtags, followers, site_link, twitter_link, 
               <p className='text-[13px]'>
                 <ReadMore>{bio}</ReadMore>
               </p>
-              <p className='text-[15px] text-blue-500 ml-1'>
+              <p className='text-[14px] text-blue-500 ml-1'>
                 {hashtags}
               </p>
             </div>
