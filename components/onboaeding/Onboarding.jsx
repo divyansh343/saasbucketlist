@@ -12,7 +12,7 @@ const Onboarding = () => {
   const [proSelected, setProSelected] = useState("")
   const [codingState, setCoding] = useState(null)
 
-  const changeModal = (msg,changeTo) => {
+  const changeModal = (msg, changeTo) => {
     if (selected === "") {
       toast('Choose one', { icon: '🔎', })
     } else {
@@ -131,7 +131,7 @@ const Onboarding = () => {
                     </div>
                   </div>
                   <div className='grid place-items-end'>
-                    <div onClick={()=>changeModal("Cool!","2")} className='py-1 px-3 bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb] rounded-[4px] mr-28 mb-5 cursor-pointer'>
+                    <div onClick={() => changeModal("Cool!", "2")} className='py-1 px-3 bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb] rounded-[4px] mr-28 mb-5 cursor-pointer'>
                       <p className='text-[20px]'>
                         Next
                       </p>
@@ -198,7 +198,7 @@ const Onboarding = () => {
                           Previous
                         </p>
                       </div>
-                      <div onClick={()=>changeModal("Great!","3")} className='py-1 px-3 bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb] hover:bg-amber-400 rounded-[4px] mr-28 mb-20 cursor-pointer'>
+                      <div onClick={() => changeModal("Great!", "3")} className='py-1 px-3 bg-[#1d1d1f] bg-opacity-80 text-[#fbfbfb] hover:bg-amber-400 rounded-[4px] mr-28 mb-20 cursor-pointer'>
                         <p className='text-[20px]'>
                           Next
                         </p>

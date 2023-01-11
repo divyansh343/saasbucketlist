@@ -15,10 +15,10 @@ const Navbar = () => {
   }
 
   return (
-    <div className={`navbar fixed top-0 z-10 border-b-[0.2px] border-gray-800 font-two ${status==="authenticated"?"plus-col":"theme-col"} `}>
+    <div className={`navbar fixed top-0 z-10 border-b-[0.2px] saturate-150 font-two ${status==="authenticated"?"plus-col":"theme-col"} `}>
       <div className="flex-1">
         <Link href="/">
-          <p className="btn btn-ghost normal-case text-xl font-one tracking-wide">IndieMag</p>
+          <p className="btn btn-ghost normal-case text-xl font-one tracking-wide">indiemake.co</p>
         </Link>
       </div>
       <div className="flex-none">
@@ -33,29 +33,27 @@ const Navbar = () => {
             </div>
           </label>
           <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box font-medium w-52">
-            <li>
+            {/* <li>
               <p className="justify-between">
                 Profile
                 <span className="badge">New</span>
               </p>
-            </li>
+            </li> */}
             {
               session ? null :
-                <Link href="/auth" className=''>
-                  <li><p>Login</p></li>
+                <Link href="/login" className=''>
+                  <li><p>login / signup</p></li>
                 </Link>
             }
-            <Link href="/onboarding" className=''>
-              <li><p>Onboarding</p></li>
-            </Link>
             <Link href="/saas" className=''>
-              <li><p>Saas</p></li>
+              <li><p>Saas<span className="badge">New</span></p></li>
             </Link>
             <Link href="/posts" className=''>
               <li><p>Posts</p></li>
             </Link>
             <Link href="/twitter" className=''>
-              <li><p>Twitter</p></li>
+              <li><p>Twitter
+              </p></li>
             </Link>
             {
               session ?

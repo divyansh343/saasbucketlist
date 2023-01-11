@@ -3,7 +3,7 @@ import React from 'react'
 
 const SaasSection = () => {
   return (
-    <section class="py-10 bg-white sm:py-16 lg:py-24">
+    <section class="py-10 theme-col sm:py-16 lg:py-24">
       <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="grid items-center grid-cols-1 gap-y-12 lg:grid-cols-2 lg:gap-x-24">
           <div>

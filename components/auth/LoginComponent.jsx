@@ -2,14 +2,20 @@ import { signIn } from 'next-auth/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-
+import { useRouter } from 'next/router'
+import { useSession } from 'next-auth/react'
 const LoginComponent = () => {
+  const router = useRouter()
+  const { data: session } = useSession()
   const handleSignInWithGoogle = async () => {
-    signIn('google',{callbackUrl:process.env.NEXTAUTH_URL})
+    signIn('google', { callbackUrl: process.env.NEXTAUTH_URL })
   }
   const handleSignInWithGit = async () => {
-    signIn('github',{callbackUrl:process.env.NEXTAUTH_URL})
+    signIn('github', { callbackUrl: process.env.NEXTAUTH_URL })
   }
+if (session) {
+  router.push("/")
+} else {
   return (
     <div className='mb-32 bg-[#fbfbfb]'>
       <div className="relative mt-32 lg:mt-5 py-16 ">
@@ -19,7 +25,12 @@ const LoginComponent = () => {
               <div className="p-6 sm:p-16">
                 <div className="space-y-4">
                   {/* <Image height={50} width={50} src="https://tailus.io/sources/blocks/social/preview/images/icon.svg" loading="lazy" className="w-10" alt="tailus logo" /> */}
-                  <h2 className="mb-8 text-2xl text-cyan-900 font-bold text-center font-two tracking-wide">⚡Supercharge yourself by unlocking the 🚀Bucket</h2>
+                  {
+                    router.pathname === "/login" ?
+                    <h2 className="mb-8 text-2xl text-cyan-900 font-bold text-center font-two tracking-wide">Log in</h2>
+                    :
+                    <h2 className="mb-8 text-2xl text-cyan-900 font-bold text-center font-two tracking-wide">⚡Supercharge your journey with <span className=''> 🚀Indiemake</span> </h2>
+                  }
                 </div>
                 <div className="mt-16 grid space-y-4">
                   <button className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 
@@ -60,6 +71,7 @@ const LoginComponent = () => {
       </div>
     </div>
   )
+}
 }
 
 export default LoginComponent
