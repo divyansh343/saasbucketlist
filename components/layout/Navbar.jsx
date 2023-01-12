@@ -4,7 +4,7 @@ import Link from 'next/link';
 import user from '../../assets/images/user.png'
 import { signOut, useSession } from 'next-auth/react';
 import { useRouter } from 'next/router'
-
+import logo from '../../assets/images/logo.png'
 const Navbar = () => {
   const router = useRouter()
   const { data: session, status } = useSession()
@@ -17,8 +17,9 @@ const Navbar = () => {
   return (
     <div className={`navbar fixed top-0 z-10 border-b-[0.2px] saturate-150 font-two ${status==="authenticated"?"plus-col":"theme-col"} `}>
       <div className="flex-1">
-        <Link href="/">
-          <p className="btn btn-ghost normal-case text-xl font-one tracking-wide">indiemake.co</p>
+        <Link className='btn btn-ghost' href="/">
+          <Image src={logo} height={40} width={40} alt='indiemake.co logo' />
+        
         </Link>
       </div>
       <div className="flex-none">
