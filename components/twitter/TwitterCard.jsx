@@ -26,7 +26,7 @@ const TwitterCard = ({ name, bio, hashtags, followers, site_link, twitter_link, 
           <div className="col-span-3 lg:col-span-5">
             <div>
               <a href={twitter_link} target="_blank" rel="noreferrer">
-                <p className='text-[16px]  font-medium'>{name}
+                <p className='text-[16px]  font-semibold'>{name}
                   <span className='inline-block mx-2 text-blue-500'>
                     <AiOutlineTwitter />
                   </span>

@@ -34,7 +34,7 @@ const TwitterList = () => {
   if (status === "authenticated") {
     return (
       <div>
-        <div className='mx-[20px] lg:ml-[200px] lg:mr-[300px] my-[80px]'>
+        <div className='mx-[20px] lg:ml-[200px] lg:mr-[300px] py-[80px]'>
           {
             loading ?
               <>

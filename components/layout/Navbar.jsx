@@ -15,7 +15,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className={`navbar fixed top-0 z-10 border-b-[0.2px] saturate-150 font-two ${status==="authenticated"?"plus-col":"theme-col"} `}>
+    <div className={`navbar fixed top-0 z-10  border-b-[0.2px] saturate-150 font-two ${status==="authenticated"?"plus-col":"theme-col"} `}>
       <div className="flex-1">
         <Link className='btn btn-ghost' href="/">
           <Image src={logo} height={40} width={40} alt='indiemake.co logo' />
@@ -29,7 +29,7 @@ const Navbar = () => {
               {
                 session ?
                   <Image alt='' height={50} width={50} src={session.user.image} /> :
-                  <Image alt='' height={50} width={50} src={user}/>
+                  <Image alt='' height={60} width={60} src={user}/>
               }
             </div>
           </label>

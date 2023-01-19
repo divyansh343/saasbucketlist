@@ -5,14 +5,14 @@ const postSchema = new mongoose.Schema({
   title: {
     /* The name of this pet */
     type: String,
-    required: [true, 'Please provide a name for this Posts.'],
-    maxlength: [20, 'Posts Name cannot be more than 60 characters'],
+    required: [true, 'Please provide a title for this Posts.'],
+    maxlength: [500, 'Posts Name cannot be more than 80 characters'],
   },
 
   link: {
     type: String,
-    required: [true, "Please provide the twitter_link"],
-    maxlength: [80, "reason length cannot be more than 60 characters"],
+    required: [true, "Please provide the post link"],
+    maxlength: [400, "reason length cannot be more than 110 characters"],
   },
 
   plus :{

@@ -13,21 +13,12 @@ const PostList = () => {
         <div className='pt-4'>
         </div>
         <div className='mx-3 lg:ml-32 lg:mr-60'>
-          <PostCard spd={false} />
-          <PostCard spd />
-          <PostCard spd={false} />
-          <PostCard spd />
-          <PostCard spd />
-          <PostCard />
-          <PostCard spd />
-          <PostCard />
-          <PostCard spd />
-          <PostCard />
-          <PostCard spd />
-          <PostCard />
-          <PostCard />
-          <PostCard spd />
-          <PostCard />
+          <PostCard text="MMI is a sentiment tool that describes the current mood in the market as emotions, ranging from extreme fear" spd={true} />
+          <PostCard text="MMI is a sentiment tool that describes the current mood in the market as emotions, ranging from extreme fear" />
+          <PostCard text="MMI is a sentiment tool that describes the current mood in the market as emotions, ranging from extreme fear" spd={true} />
+          <PostCard  />
+          <PostCard text="MMI is a sentiment tool that describes the current mood in the market as emotions, ranging from extreme fear" spd={true} />
+         
         </div>
       </div>
     ) 

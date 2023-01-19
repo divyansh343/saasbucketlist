@@ -75,7 +75,7 @@ a {
 }
 
 .nav-col {
-  @apply bg-[#1d1d1f] ;
+  @apply bg-[#1d1d1f] bg-opacity-95 ;
 }
 
 .secondary-col {

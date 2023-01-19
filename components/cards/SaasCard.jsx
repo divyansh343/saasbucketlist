@@ -24,7 +24,7 @@ const SaasCard = ({ isfor, color, baseCol, iname, description, img, link, pricin
   };
 
   return (
-    <div className='my-[7px] lg:my-[9px] saturate-150'>
+    <div className={`my-[7px] lg:my-[9px] saturate-150`}>
       <article
         style={{ "boxShadow": "0 4px 30px rgba(0, 0, 0, 0.1)", "backdropFilter": "blur(4.6px)", "WebkitBackdropFilter": "blur(4.6px)", }}
         className={`rounded-[6px] ${baseCol ? " plus-col" : "theme-col"} 
@@ -72,11 +72,11 @@ const SaasCard = ({ isfor, color, baseCol, iname, description, img, link, pricin
 
                   <div className='div grid-flow-col '>
                     {isfor.filter((type, idx) => idx < typeVal()).map(type =>
-                      <div key={type} className='my-2 inline-grid'>
+                      <div key={type} className={`my-2 ${baseCol? "animate-bounce" : null}  inline-grid`}>
                         <button className='secondary-col border-[0.2px] border-gray-500 rounded-[14px] mx-1 
                         hover:drop-shadow
                         px-2 py-[0.3px] '>
-                          <span className="text-[16px] font-normal font-two">
+                          <span className={"text-[16px] font-normal font-two"}>
                             <TypeList type={type} />
                           </span>
                         </button>
