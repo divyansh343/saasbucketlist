@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const SaasSection = () => {
@@ -13,9 +14,10 @@ const SaasSection = () => {
           <div class="text-center lg:text-left">
             <h2 class="text-3xl font-bold tracking-wide text-black sm:text-4xl lg:text-5xl"> 150+ Handpicked tools and services for Makers.</h2>
             <p class="mt-6 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-
-            <a href="#" title="" class="inline-flex items-center justify-center px-8 font-two py-4 font-semibold text-white transition-all duration-200 bg-[#1d1d1f]
-            bg-opacity-90 rounded-md mt-9 " role="button"> Check all 150+ apps </a>
+            <Link href="/onboarding">
+              <p title="" class="inline-flex items-center justify-center px-8 font-two py-4 font-semibold text-white transition-all duration-200 bg-[#1d1d1f]
+            bg-opacity-90 rounded-md mt-9 " role="button"> Check all 150+ apps </p>
+            </Link>
           </div>
         </div>
       </div>

@@ -15,7 +15,8 @@ const Navbar = () => {
   }
 
   return (
-    <div className={`navbar fixed top-0 z-10  border-b-[0.2px] saturate-150 font-two ${status==="authenticated"?"plus-col":"theme-col"} `}>
+    <div className={`navbar fixed top-0 z-10  border-b-[0.2px] saturate-150 font-two theme-col `}>
+    {/* <div className={`navbar fixed top-0 z-10  border-b-[0.2px] saturate-150 font-two ${status==="authenticated"?"plus-col":"theme-col"} `}> */}
       <div className="flex-1">
         <Link className='btn btn-ghost' href="/">
           <Image src={logo} height={40} width={40} alt='indiemake.co logo' />

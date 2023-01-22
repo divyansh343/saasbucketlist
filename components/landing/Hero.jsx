@@ -45,7 +45,7 @@ const Hero = () => {
                 <p class="mt-8 text-base text-black sm:text-xl">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.</p>
 
                 <div class="mt-10 sm:flex sm:items-center sm:space-x-8">
-                  <Link href="/onboarding" title="" class="inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-white transition-all duration-200 bg-[#1d1d1f] bg-opacity-80 rounded-[8px]" role="button"> Start exploring </Link>
+                  <Link href="/onboarding" title="" class="inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-white transition-all duration-200 nav-col rounded-[8px]" role="button"> Start exploring </Link>
 
                   {/* <a href="#" title="" class="inline-flex items-center mt-6 text-base font-semibold transition-all duration-200 sm:mt-0 hover:opacity-80">
                     <svg class="w-10 h-10 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
