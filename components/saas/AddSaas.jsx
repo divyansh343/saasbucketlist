@@ -115,16 +115,16 @@ const AddSaas = () => {
           <button className="btn btn-success mr-52">Publish</button>
         </div>
       </div>
-          <button onClick={()=>setData({
-            title: "",
-            url: "",
-            img_url: "",
-            pricing: "",
-            description: "",
-            for: "",
-            author_name: "",
-            author_twitter_url: "",
-          })} className="btn btn-success mr-52">Clear</button>
+      <button onClick={() => setData({
+        title: "",
+        url: "",
+        img_url: "",
+        pricing: "",
+        description: "",
+        for: "",
+        author_name: "",
+        author_twitter_url: "",
+      })} className="btn btn-success mr-52">Clear</button>
     </div>
   )
 }

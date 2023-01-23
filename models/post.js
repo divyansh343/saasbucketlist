@@ -5,6 +5,7 @@ const postSchema = new mongoose.Schema({
   title: {
     /* The name of this pet */
     type: String,
+    unique : true,
     required: [true, 'Please provide a title for this Posts.'],
     maxlength: [500, 'Posts Name cannot be more than 80 characters'],
   },
