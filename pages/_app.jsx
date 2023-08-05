@@ -4,21 +4,19 @@ import { Toaster } from 'react-hot-toast'
 import { SessionProvider } from "next-auth/react"
 function MyApp({
   Component,
-  pageProps: { session, ...pageProps },
+  pageProps: {...pageProps },
 }) {
   return (
     <>
-      <SessionProvider session={session}>
-        <div  >
-          <Toaster
-            position="bottom-right"
-            reverseOrder={false}
-          />
-          <Layout>
-            <Component {...pageProps} />
-          </Layout >
-        </div>
-      </SessionProvider>
+      <div data-theme="cupcake" >
+        <Toaster
+          position="bottom-right"
+          reverseOrder={false}
+        />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout >
+      </div>
     </>
   )
 }

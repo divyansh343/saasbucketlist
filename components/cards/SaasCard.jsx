@@ -26,18 +26,17 @@ const SaasCard = ({ isfor, color, baseCol, iname, description, img, link, pricin
   return (
     <div className={`my-[7px] lg:my-[9px] saturate-150`}>
       <article
-        style={{ "boxShadow": "0 4px 30px rgba(0, 0, 0, 0.1)", "backdropFilter": "blur(4.6px)", "WebkitBackdropFilter": "blur(4.6px)", }}
         className={`rounded-[6px] ${baseCol ? " plus-col" : "theme-col"} 
-        border-[0.5px]
-        ${baseCol ? null : "p-[0.1px]"}
-        border-gray-400
-        shadow-xl transition 
-        hover:animate-background hover:bg-[length:400%_400%] hover:shadow-lg hover:[animation-duration:_4s]`}
+         border-[0.1px]
+         ${show ? "bg-[#fbf719] bg-opacity-10" : ""}
+         hover:bg-[#fbf719] hover:bg-opacity-20
+        border-gray-400  border-opacity-70
+       `}
       >
         <div
           className={`
         rounded-[6px]
-        ${baseCol ? "plus-col" : "theme-col"}
+        ${baseCol ? "plus-col" : ""}
           pt-[10px] px-[4px] sm:p-6
           `}>
           <div
@@ -72,7 +71,7 @@ const SaasCard = ({ isfor, color, baseCol, iname, description, img, link, pricin
 
                   <div className='div grid-flow-col '>
                     {isfor.filter((type, idx) => idx < typeVal()).map(type =>
-                      <div key={type} className={`my-2 ${baseCol? "animate-bounce" : null}  inline-grid`}>
+                      <div key={type} className={`my-2 ${baseCol? "no-animation" : null}  inline-grid`}>
                         <button className='secondary-col border-[0.2px] border-gray-500 rounded-[14px] mx-1 
                         hover:drop-shadow
                         px-2 py-[0.3px] '>

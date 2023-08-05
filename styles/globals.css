@@ -11,7 +11,7 @@ body {
   /* font-family: 'SF Pro Display', sans-serif; */
   /* font-family: 'Merienda', cursive; */
   overflow-x: hidden;
-  background: #fbfbfb;
+  /* background: #fbfbfb; */
 }
 
 #root {
@@ -64,7 +64,7 @@ a {
 /*  */
 .theme-col {
   /* @apply bg-[#fbfbfb]; */
-  @apply bg-[#f5f5f7];
+  /* @apply bg-[#f5f5f7]; */
 }
 
 .font-one {

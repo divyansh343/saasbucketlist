@@ -3,12 +3,9 @@ import React, { useEffect, useState } from 'react'
 import TwitterCard from './TwitterCard'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
-import LoginComponent from '../auth/LoginComponent';
 const TwitterList = () => {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false);
-  const router = useRouter()
-  const { data: session ,status} = useSession()
   const getProfiles = () => {
     var config = {
       method: 'get',
@@ -31,7 +28,7 @@ const TwitterList = () => {
   useEffect(() => {
     getProfiles();
   }, [])
-  if (status === "authenticated") {
+ 
     return (
       <div>
         <div className='mx-[20px] lg:ml-[200px] lg:mr-[300px] py-[80px]'>
@@ -62,9 +59,7 @@ const TwitterList = () => {
         </div>
       </div>
     )
-  } else {
-    return <LoginComponent/>
-  }
+ 
 }
 
 export default TwitterList
