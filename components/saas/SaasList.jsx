@@ -76,7 +76,7 @@ const SaasList = () => {
     },
   ]
 
-  const handleSearch = () => {
+  const handleSearch = async () => {
     setLoading(true)
     axios(config)
       .then(function (response) {
@@ -94,7 +94,7 @@ const SaasList = () => {
   }
 
   useEffect(() => {
-    handleSearch()
+   handleSearch()
   }, [])
 
 
