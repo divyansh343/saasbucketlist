@@ -22,7 +22,7 @@ const SaasList = () => {
       return process.env.NEXT_PUBLIC_GET_SAAS + searchTerm;
     }
   }
-  var config = {
+  let config = {
     method: 'get',
     url: url(),
     headers: {}
@@ -92,9 +92,29 @@ const SaasList = () => {
         setLoading(false)
       });
   }
+  const eSearch = async () => {
+    setLoading(true)
+    axios({
+      method: 'get',
+      url: process.env.NEXT_PUBLIC_GET_SAAS,
+      headers: {}
+    })
+      .then(function (response) {
+        setSaaslist(response.data.data)
+        setinfo({
+          limit: response.data.limit,
+          page: response.data.page
+        })
+        setLoading(false)
+      })
+      .catch(function (error) {
+        console.log(error);
+        setLoading(false)
+      });
+  }
 
   useEffect(() => {
-   handleSearch()
+    eSearch()
   }, [])
 
 
